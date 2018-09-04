@@ -36,7 +36,7 @@ section {
 	cursor: pointer;
 
 }
-.ball{
+.ball {
 	position: relative;
 	width: 100px;
 	height: 100px;
@@ -46,7 +46,7 @@ section {
 	animation-play-state: paused;
 }
 
-.show{
+.show {
 	display: flex;
 }
 

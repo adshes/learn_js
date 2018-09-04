@@ -3,8 +3,8 @@ window.addEventListener('load', function(){
 	const button = document.querySelector ('.button');
 	const ball = document.querySelector('.ball');
 	const par = document.querySelector('.show p');
-button.addEventListener('click', ()=>{
-	ball.style.animationPlayState= 'running';
+button.addEventListener('click', () => {
+	ball.style.animationPlayState = 'running';
 })
 window.onscroll = () => {
 	//console.log('ds');

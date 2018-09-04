@@ -1,24 +1,37 @@
-const Colored = document.querySelector('.page');
-let que = prompt('Какой цвет');
-Colored.style.backgroundColor = que;
+var location1= 3
+var location2= 4;
+var location3= 5;
 
-const Colored1 = document.querySelector('.page');
-let que1 = prompt('Какой текст');
-Colored1.style.color = que1;
+var guess;
+var hits = 0;
+var quesses = 0;
 
-const Kiu = document.querySelector('.name');
-let quest = prompt('Какое имя');
-Kiu.innerHTML = quest;
+var isSunk = false;
+  while (isSunk == false){
 
-const Kit = document.querySelector('img');
-let ques = prompt('адрес картинки');
-Kit.innerHTML = ques;
+  	guess = prompt('Ready, aim, fire! (enter a number 0-6):');
+  	if (guess<0 || guess>6) {
+  		alert('Введи другой номер');
+  	}
+  	else {
 
-const shortBio = document.querySelector('.shortBio');
-shortBio.innerHTML = prompt('Введите текст страницы');
+  		quesses = quesses + 1;
+  	}
+  	if (guess == location1 || guess == location2 || guess== location3){
+  		hits =hits + 1;
+  		alert('HIT!');
 
-shortBio.className += ' animated';
 
+  }
+   if (hits ==3){
+   	isSunk = true;
+   	alert('You sank my battleship!');
 
-//let src = document.querySelector('img');
-//src.innerHTML = prompt('Введите текст страницы');
+   }
+   else{
+  	alert('MISS');
+  }
+  	}
+var stats = "You took " + quesses + " guesses to sink the battleship, " +
+"which means your shooting accuracy was " + (3/quesses);
+alert(stats);
